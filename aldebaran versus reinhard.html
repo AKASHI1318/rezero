@@ -3,191 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aldebaran lwn Reinhard | Gelung Abadi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Aldebaran lwn Reinhard</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --bg-color: #0d0d10;
-    --card-bg: rgba(26, 26, 31, 0.95);
-    --text-color: #e0e0e0;
-    --reinhard-color: #87CEEB; /* Biru Langit */
-    --reinhard-glow: rgba(135, 206, 235, 0.4);
-    --al-color: #ff4d4d; /* Merah */
-    --al-glow: rgba(255, 77, 77, 0.4);
-    --dragon-color: #ff8c00; /* Jingga untuk Naga Al */
-    --highlight: #ffcc00;
-  }
-
+  /* --- GAYA ASAS (BASIC STYLES) --- */
   body {
-    background-color: var(--bg-color);
-    /* IMEJ LATAR BELAKANG */
-    background-image: url('https://witchculttranslation.com/wp-content/uploads/2025/01/9_13_FinalDirectorCut1.png');
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    color: var(--text-color);
+    background-color: #000000; /* Hitam mutlak */
+    color: #ffffff; /* Putih mutlak */
     font-family: 'Roboto Mono', monospace;
     margin: 0;
-    padding: 0;
-    line-height: 1.8;
+    padding: 20px;
+    line-height: 1.6;
   }
 
+  /* Bekas Utama */
   .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px;
-    /* Lapisan gelap untuk menjadikan teks mudah dibaca */
-    background-color: rgba(13, 13, 16, 0.92);
-    backdrop-filter: blur(3px); 
-    min-height: 100vh;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
+    background-color: #111111; /* Kelabu sangat gelap */
+    padding: 20px;
+    border: 1px solid #333;
   }
 
   h2 {
-    font-family: 'Cinzel', serif;
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    background: linear-gradient(90deg, var(--al-color), #fff, var(--reinhard-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(255,255,255,0.1);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-
-  /* Teks Naratif */
-  .narrative {
-    margin: 25px 0;
-    color: #ccc;
-    font-size: 1rem;
-    text-align: justify;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  /* KOTAK DIALOG BERGAYA */
-  .dialogue-box {
-    background: linear-gradient(90deg, var(--card-bg) 0%, rgba(20, 20, 25, 0.8) 100%);
-    border-left-width: 6px;
-    border-left-style: solid;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 0 12px 12px 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .dialogue-box:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    background: linear-gradient(90deg, rgba(35, 35, 40, 0.95) 0%, rgba(30, 30, 35, 0.8) 100%);
-  }
-
-  /* Gaya Teks Dialog */
-  .dialogue-text {
     font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    margin-top: 5px;
-    display: block;
-    line-height: 1.4;
+    color: #ff4d4d; /* Merah */
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+  }
+
+  /* --- KOTAK DIALOG (DIALOGUE BOX) --- */
+  /* Ini memastikan kotak sentiasa kelihatan */
+  .dialogue-box {
+    background-color: #222222; /* Kelabu Gelap */
+    border: 1px solid #444444; /* Garisan Tepi Kelabu Cerah */
+    border-left-width: 5px; /* Garisan Kiri Tebal */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: block; /* Paksa tunjuk */
+    opacity: 1; /* Paksa jelas (tidak telus) */
   }
 
   /* Nama Watak */
   .char-name {
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    font-weight: bold;
     display: block;
-    opacity: 0.8;
+    margin-bottom: 5px;
   }
 
-  /* Reinhard Specifics */
-  .reinhard { 
-    color: var(--reinhard-color); 
-    text-shadow: 0 0 10px var(--reinhard-glow);
+  /* Teks Dialog */
+  .dialogue-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    display: block;
   }
-  .box-reinhard { border-left-color: var(--reinhard-color); }
 
-  /* Aldebaran Specifics */
-  .aldebaran { 
-    color: var(--al-color); 
-    text-shadow: 0 0 10px var(--al-glow);
+  /* --- WARNA WATAK (CHARACTER COLORS) --- */
+  /* Reinhard (Biru) */
+  .reinhard { color: #87CEEB; }
+  .box-reinhard { border-left-color: #87CEEB; }
+
+  /* Aldebaran (Merah) */
+  .aldebaran { color: #ff4d4d; }
+  .box-al { border-left-color: #ff4d4d; }
+
+  /* Naga (Jingga) */
+  .dragon-al { color: #ff8c00; }
+  .box-dragon { border-left-color: #ff8c00; }
+
+  /* --- LAIN-LAIN --- */
+  .narrative {
+    color: #cccccc;
+    margin: 20px 0;
+    text-align: justify;
   }
-  .box-al { border-left-color: var(--al-color); }
 
-  /* Dragon Specifics */
-  .dragon-al {
-    color: var(--dragon-color);
-  }
-  .box-dragon { border-left-color: var(--dragon-color); }
-
-  /* Kesan Teks Khas */
-  .red-text { 
+  .red-text {
     color: #ff4d4d;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(255, 77, 77, 0.2);
+    text-decoration: underline;
   }
 
-  .highlight { 
-    color: var(--highlight); 
-    font-weight: bold; 
-    border-bottom: 1px dashed var(--highlight);
+  .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+
+  .action {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin: 30px 0;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+    padding: 10px;
   }
 
   .loop-marker {
     text-align: center;
-    color: #888;
-    margin: 50px 0;
-    font-style: italic;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
-    padding: 15px;
+    font-size: 1.2rem;
+    color: #666;
+    margin: 40px 0;
     font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-    background: rgba(0,0,0,0.3);
+    border: 1px solid #333;
+    padding: 10px;
   }
 
-  /* Dinding Teks untuk Pengulangan */
   .wall-of-text {
     font-size: 0.7rem;
-    line-height: 1.2;
     color: #555;
-    max-height: 200px;
-    overflow-y: auto;
-    background: #050505;
-    padding: 15px;
+    background: #000;
+    padding: 10px;
     border: 1px solid #333;
-    margin: 20px 0;
-    text-align: justify;
-    box-shadow: inset 0 0 10px #000;
-  }
-
-  /* Aksi/Naratif */
-  .action { 
-    color: #999; 
-    font-style: italic; 
-    margin: 40px 0; 
-    text-align: center;
-    font-size: 0.95rem;
-    position: relative;
-    padding: 0 30px;
-    font-family: 'Cinzel', serif;
-  }
-  
-  .action::before, .action::after {
-    content: "✦";
-    color: #555;
-    margin: 0 15px;
-    font-size: 0.8rem;
+    max-height: 150px;
+    overflow-y: auto;
   }
 </style>
 </head>
@@ -198,9 +134,7 @@
   <h2>Aldebaran lwn Reinhard</h2>
 
   <div class="narrative">
-    Rambut merah menyala bagaikan api yang marak, mata biru memenjara kejernihan sempurna langit biru; dari hujung rambut ke hujung kaki, inilah makhluk yang dicipta dengan kepahlawanan yang tidak tercemar, tanpa sebarang kekotoran.
-    <br><br>
-    Berdiri teguh di tengah-tengah lautan pasir yang luas, di bawah kedinginan malam, Reinhard melontarkan pandangannya, menyebabkan seluruh bulu roma di badan Aldebaran meremang.
+    Rambut merah menyala bagaikan api yang marak, mata biru memenjara kejernihan sempurna langit biru.
     <br><br>
     <span class="red-text">――Saint Pedang, Reinhard van Astrea.</span>
   </div>
@@ -258,14 +192,14 @@
     <span class="dialogue-text">"――BOHRRRGGGHHH!!!"</span>
   </div>
 
-  <div class="action">Gelombang tenaga putih yang membuak menelan Reinhard, mengubah bentuk Lautan Pasir yang sunyi itu.</div>
+  <div class="action">Gelombang tenaga putih yang membuak menelan Reinhard.</div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
     <span class="dialogue-text">"――Hk, undur, diriku!!"</span>
   </div>
 
-  <div class="action">Reinhard melompat tanpa calar, bertembung secara berhadapan dengan Naga itu.</div>
+  <div class="action">Reinhard melompat tanpa calar.</div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
@@ -303,7 +237,7 @@
   </div>
 
   <div class="narrative">
-    <span class="red-text">――Al Shario.</span> Satu mantera terlarang yang mampu membelah dunia. Ia berdiri sebagai kemuncak kehancuran.
+    <span class="red-text">――Al Shario.</span> Satu mantera terlarang yang mampu membelah dunia.
   </div>
 
   <div class="dialogue-box box-dragon">
@@ -311,7 +245,7 @@
     <span class="dialogue-text">"――Al Shario."</span>
   </div>
 
-  <div class="action">Naga itu memukul Reinhard dengan sayapnya, melancarkannya tanpa pertahanan ke arah bintang yang sedang jatuh.</div>
+  <div class="action">Naga itu memukul Reinhard dengan sayapnya ke arah bintang yang sedang jatuh.</div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
@@ -338,8 +272,6 @@
   </div>
 
   <div class="narrative">
-    Selepas menerima jawapannya, dia tergamam apabila pancaran kemusnahan itu dilayan seperti bola api. Namun, rasa tergamam itu segera ditutup oleh rasa gerun yang membuak.
-    <br><br>
     Jika seseorang percaya bahawa Perlindungan Suci Imbangan Bola adalah seperti namanya, maka seorang pengimbang bola di sarkas bukan sekadar berdiri di atas bola, tetapi mengawalnya sesuka hati――
   </div>
 
@@ -351,7 +283,7 @@
   <div class="action">Kaki Reinhard kelihatan mengetuk ringan permukaan bintang itu.</div>
 
   <div class="narrative">
-    Pada saat berikutnya, trajektori bintang yang dijatuhkan oleh Al Shario berubah, dan melencong ke arah penyerunya, "Aldebaran", menyebabkan cahaya bintang yang ganas itu menghampirinya dengan pantas.
+    Pada saat berikutnya, trajektori bintang yang dijatuhkan oleh Al Shario berubah, dan melencong ke arah penyerunya, "Aldebaran".
     Melihatnya, Naga itu menyumpah, menyambut serangan itu dengan nafasnya yang maha kuat.
   </div>
 
@@ -361,8 +293,7 @@
   </div>
 
   <div class="narrative">
-    Seketika kemudian, cahaya merah dan putih yang menyilaukan menelan langit, mencipta ilusi bahawa malam telah berakhir.
-    Bintang yang hancur itu meletup menjadi serpihan berkilauan yang tidak terhitung banyaknya, mengebom lautan pasir.
+    Seketika kemudian, cahaya merah dan putih yang menyilaukan menelan langit.
   </div>
 
   <div class="dialogue-box box-al">
@@ -372,7 +303,6 @@
 
   <div class="narrative">
     Sudah tentu, Aldebaran yang berada di tanah juga telah diterbangkan.
-    Tidak lama kemudian, dia mendengar bunyi gemuruh... di mana dia melihat "Aldebaran", dengan satu sayap patah dan satu lagi terputus, telah jatuh ke tanah tanpa daya.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -381,11 +311,8 @@
   </div>
 
   <div class="narrative">
-    Ke arah sisi Aldebaran yang rebah, Reinhard berjalan.
-    Membiarkan Naga yang separuh mati dan Aldebaran, dia telah ditelan oleh cahaya bintang yang dahsyat, namun tidak kelihatan mempunyai sebarang tanda kecederaan.
-    <br><br>
     Memang, Reinhard telah menilai dengan betul. ――Untuk kali ke-lapan ribu empat ratus enam puluh enam, ini adalah kemenangannya.
-    <br><br>
+    <br>
     Tetapi――
   </div>
 
@@ -395,8 +322,7 @@
   </div>
 
   <div class="narrative">
-    Pada ketika itu, di belakang Reinhard, "Aldebaran" mengangkat kepalanya dari tempat ia jatuh, dan melepaskan nafas Naga yang menakutkan ke arah mereka.
-    Reinhard mustahil dapat mengabaikannya. ――Itu kerana Aldebaran juga berada dalam laluan tembakan itu.
+    Pada ketika itu, di belakang Reinhard, "Aldebaran" mengangkat kepalanya dan melepaskan nafas Naga.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -407,19 +333,12 @@
   <div class="action">Reinhard menebas nafas itu secara berhadapan.</div>
 
   <div class="narrative">
-    Suara Reinhard melimpah dengan kemarahan yang adil, hatinya dipenuhi amarah terhadap percubaan bunuh-membunuh ini.
-    <br><br>
-    Sungguh baik hati dirinya. Lain kali, dia akan memasukkan itu ke dalam strateginya.
     Dengan keputusan ini, Aldebaran membuka bungkusan ubat di dalam mulutnya, dan menelan racun yang terkandung di dalamnya.
   </div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
     <span class="dialogue-text">"Apa…!"</span>
-  </div>
-
-  <div class="narrative">
-    Menyedari ada sesuatu yang tidak kena, Reinhard berpusing, wajahnya menjadi kaku. Dalam penglihatannya, Aldebaran sedang menggelupur dan kejang di tanah, lemas dalam buih berdarah ketika kesedarannya pergi ke alam sana――
   </div>
 
   <div class="loop-marker">× × ×</div>
@@ -430,8 +349,7 @@
   </div>
 
   <div class="narrative">
-    Suara yang bermaruah membelah langit yang dingin dan beku, dan sejalur cahaya menembusi Naga yang sedang terbang itu secara serong.
-    Sementara impak itu menggegarkan seluruh badannya, Aldebaran, dengan refleks yang akhirnya dilatih selepas jatuh mati beratus kali, berpaut pada bonjolan di belakang Naga... dan bersama-sama dengan dirinya yang satu lagi, jatuh menjunam ke tanah.
+    Suara yang bermaruah membelah langit yang dingin dan beku.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -450,11 +368,6 @@
 
   <div class="loop-marker">△▼△▼△▼△</div>
 
-  <div class="narrative">
-    Walaupun ia adalah konfrontasi yang dia faham akan berlaku lambat laun, dia rasa seperti ia datang kepadanya terlalu cepat.
-    Sebaliknya, adalah lebih diingini untuk dapat bertarung pada masa dia berada pada tahap keletihan yang minimum. ――Dan malah tindakan berlagak optimis itu hanya mungkin sebelum dia mendengar "<span class="red-text">――Setakat itu sahajalah kamu</span>" sebanyak seratus kali.
-  </div>
-
   <div class="dialogue-box box-al">
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"Jadi orang yang asyik cakap '<span class="red-text">――Setakat itu sahajalah kamu</span>' tu adalah Reinhard selama ni! Aku sangat terharu bila aku sedar benda tu…"</span>
@@ -466,18 +379,7 @@
   </div>
 
   <div class="narrative">
-    Sebaik sahaja matriks dikemas kini, mustahil untuk kembali ke tugas sebelumnya.
-    Ini bermakna, Aldebaran tiada pilihan selain menakluk Saint Pedang, Reinhard van Astrea, menggunakan matriks yang bermula dengan pengisytiharan "<span class="red-text">――Setakat itu sahajalah kamu</span>".
-    Oleh sebab itu, dia telah melalui lebih lapan ribu pengulangan ayat "<span class="red-text">――Setakat itu sahajalah kamu</span>".
-  </div>
-
-  <div class="narrative">
-    Untuk menakluk mana-mana musuh, tidak terhad kepada Reinhard sahaja, apa yang diperlukan adalah pecahan elemen.
-    Aldebaran akan memecahkannya kepada elemen individu iaitu <span class="highlight">Hati</span>, <span class="highlight">Teknik</span>, dan <span class="highlight">Tubuh</span>, dan akan merungkainya.
-    <br><br>
-    Untuk menyusun semula kata, bagi menakluk Reinhard, adalah penting untuk menghancurkan elemen-elemen yang telah didedahkan melalui analisisnya, satu demi satu.
-    <br>
-    Ergo――
+    Aldebaran tiada pilihan selain menakluk Saint Pedang, Reinhard van Astrea, menggunakan matriks yang bermula dengan pengisytiharan "<span class="red-text">――Setakat itu sahajalah kamu</span>".
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -485,20 +387,11 @@
     <span class="dialogue-text">"<span class="red-text">――Setakat itu sahajalah kamu.</span>"</span>
   </div>
 
-  <div class="narrative">
-    Dengan itu, ketika Naga ditembusi cahaya, pertempuran seterusnya Aldebaran bermula.
-  </div>
-
   <div class="loop-marker">――Lapan ribu lapan ratus lapan puluh lapan.</div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">???</span>
     <span class="dialogue-text">"<span class="red-text">――Setakat itu sahajalah kamu.</span>"</span>
-  </div>
-
-  <div class="narrative">
-    Di tengah-tengah pertempuran berturut-turut, dia menjadi yakin bahawa bagi Reinhard, yang memiliki Konstitusi Peredaran Mana Berlebihan, Lautan Pasir Augria, yang dipenuhi dengan Miasma, adalah lokasi paling buruk yang boleh dibayangkan.
-    Malah apabila terdedah kepada Al Karum yang menjana graviti super, Reinhard telah mengatasinya walaupun ditelan olehnya melalui kekuatan semata-mata.
   </div>
 
   <div class="dialogue-box box-al">
@@ -515,11 +408,6 @@
     <span class="dialogue-text">"<span class="red-text">――Setakat itu sahajalah kamu.</span>"</span>
   </div>
 
-  <div class="narrative">
-    Penyahmampatan letupan ruang tertutup yang disebabkan oleh letupan wap adalah hasil yang tidak dapat dijangka. Serangan yang lahir daripada sintesis sihir dengan sains.
-    Rancangan itu adalah untuk menipu Perlindungan Suci Pengelakan Api dan Pengelakan Air secara serentak... tetapi, dengan dia menerima Perlindungan Suci Permainan Api dan Permainan Air, percubaan ini juga telah diatasi.
-  </div>
-
   <div class="dialogue-box box-al">
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"――<span class="red-text">Seterusnya.</span>"</span>
@@ -532,12 +420,6 @@
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">???</span>
     <span class="dialogue-text">"<span class="red-text">――Setakat itu sahajalah kamu.</span>"</span>
-  </div>
-
-  <div class="narrative">
-    Mengikut prinsip yang menjadi asas kepada penangkal petir, panahan petir yang tidak dapat dielak menyambar Reinhard.
-    Reinhard meneutralkan sepenuhnya ini dengan Perlindungan Suci Awan Petir miliknya.
-    Menggunakan daya magnet untuk melumpuhkannya juga berakhir dengan kegagalan disebabkan Perlindungan Suci Permainan Pasir dan Gelinciran Lumpur.
   </div>
 
   <div class="dialogue-box box-al">
@@ -555,11 +437,7 @@
   </div>
 
   <div class="narrative">
-    Bertindak balas terhadap kegagalan sebelumnya menyebabkan dia seketika terlupa akan latihan yang sepatutnya tertanam dalam jiwanya.
-    Di kejauhan, tidak dapat mengambil Aldebaran yang sedang jatuh, hanya kedengaran raungan Naga itu.
-    <br><br>
-    Jadi, sebagai langkah keselamatan, Aldebaran menelan racun itu.
-    Sebelum menghentam tanah, diserang kesakitan yang amat sangat seolah-olah seluruh darahnya mendidih, fikirannya menjadi putih――
+    Sebelum menghentam tanah, diserang kesakitan yang amat sangat, fikirannya menjadi putih――
   </div>
 
   <div class="dialogue-box box-al">
@@ -581,7 +459,7 @@
   </div>
 
   <div class="wall-of-text">
-    berulang, dan berulang, dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang lagi...
+    berulang, dan berulang, dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang lagi...
   </div>
 
   <div class="narrative">
@@ -594,12 +472,6 @@
   </div>
 
   <div class="narrative">
-    Berdiri menentang Reinhard di hadapan, renungan tertumpu kepadanya, Aldebaran menyeluk sakunya, mengeluarkan sebuah buku tunggal, dan mengangkatnya tinggi di atas kepalanya dengan halaman terbuka.
-    Itu adalah Buku Kematian yang dia ambil dari Menara Pemerhati Pleiades―― Buku Aldebaran sendiri.
-    <br><br>
-    Reinhard memiliki Perlindungan Suci Mimpi Ngeri, jadi dia sangat tahan terhadap cuci otak.
-    Secara ringkasnya, Reinhard bukanlah orang yang Aldebaran tunjukkan Buku Kematian itu.
-    <br><br>
     Ia adalah "Aldebaran" yang satu lagi, bersedia di belakangnya.
   </div>
 
@@ -608,18 +480,12 @@
     <span class="dialogue-text">"――Penyegerakan, selesai."</span>
   </div>
 
-  <div class="narrative">
-    Buku Kematian yang dibawanya telah merekodkan semua pertempuran sengit sebelah pihak menentang Reinhard yang dialami Aldebaran. ――Dengan menunjukkannya kepada "Aldebaran", Aldebaran membolehkan rakan kongsi yang ditinggalkan oleh kawasan itu untuk menyamai tahapnya pada bila-bila masa.
-  </div>
-
   <div class="dialogue-box box-al">
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"――Selagi aku tak putus asa, tiada siapa yang boleh kalahkan aku."</span>
   </div>
 
   <div class="narrative">
-    Itu adalah keyakinan mutlak yang dengannya Aldebaran terus berjuang menentang kekalahan yang menjangkau lebih daripada seratus ribu kali.
-    <br>
     <span class="red-text">Aku takkan goyah, walau apa pun. ――Dengan tekad itulah, aku mulakan semua ini.</span>
   </div>
 
@@ -630,7 +496,6 @@
 
   <div class="narrative">
     Di samping "<span class="red-text">――Setakat itu sahajalah kamu</span>", ini adalah pengenalan yang dia dengar lebih seratus ribu kali.
-    Menerimanya, Aldebaran menarik nafas, berhenti sebentar, dan menyambung.
   </div>
 
   <div class="dialogue-box box-al">
@@ -645,18 +510,12 @@
   <div class="loop-marker">△▼△▼△▼△</div>
 
   <div class="narrative">
-    Jarak antara kedua-duanya hilang dalam sekelip mata. Walaupun terdapat Miasma, Perlindungan Suci Permainan Pasir membolehkan Reinhard mengabaikan pijakan yang buruk, dan Perlindungan Suci Langit Malam memberikannya kekuatan.
-    Membawa Pedang Naga yang bersarung di pinggangnya, Saint Pedang itu menghampiri.
+    Jarak antara kedua-duanya hilang dalam sekelip mata.
   </div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
     <span class="dialogue-text">"――<span class="red-text">Haahraan!!</span>"</span>
-  </div>
-
-  <div class="narrative">
-    Setelah memasang Memori lebih seratus ribu pertempuran, raungan yang tidak lagi sumbang berubah menjadi cahaya putih pemusnah, memintas Reinhard yang datang secara berhadapan.
-    Nafas Naga hanyalah satu aliran Mana yang sangat kuat. Satu letupan yang kelihatan akan memusnahkan lautan pasir yang luas untuk selama-lamanya.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -666,8 +525,6 @@
 
   <div class="narrative">
     Seketika itu, satu kilatan yang menyaingi nafas Naga membelah cahaya putih itu tepat kepada dua.
-    Apa yang melakukannya adalah Pedang Naga Reid, masih di dalam sarungnya. Dengan menggabungkan kekuatan sarung dan kuasa pedangnya sendiri, Reinhard telah memutuskan nafas Naga itu.
-    Tetapi, pada ketika itu――
   </div>
 
   <div class="dialogue-box box-al">
@@ -681,9 +538,7 @@
   </div>
 
   <div class="narrative">
-    Aldebaran menjerit, dan tanpa sebarang kata pengesahan, Naga itu menghanguskan dunia dalam satu letupan neraka.
-    Lautan pasir tengah malam diterangi oleh cahaya merah terang, berubah menjadi neraka yang hangus. Pasir mencair menjadi kaca.
-    Pemandangan itu mengingatkan kepada cahaya bintang Al Shario, tetapi lebih dramatik.
+    Naga itu menghanguskan dunia dalam satu letupan neraka.
   </div>
 
   <div class="dialogue-box box-al">
@@ -692,9 +547,6 @@
   </div>
 
   <div class="narrative">
-    Seorang lelaki berambut merah menyala dengan berani melangkah masuk ke dalam dunia berapi itu.
-    Menepis api, Reinhard telah mengelak sebahagian besar kerosakan dengan Perlindungan Suci Pengelakan Api miliknya.
-    Oleh itu, baik serangan api mahupun perubahan rupa bumi bukanlah sasaran sebenar Aldebaran.
     Niat sebenarnya adalah――
   </div>
 
@@ -704,18 +556,12 @@
   </div>
 
   <div class="narrative">
-    Pada ketika itu, Reinhard, berdiri di tengah-tengah api yang marak, mengerutkan dahinya, dan meletakkan tangannya di tekak.
-    Dia sepatutnya sedar. ――Dia berada dalam situasi kritikal di mana dia tidak boleh bernafas.
+    Dia berada dalam situasi kritikal di mana dia tidak boleh bernafas.
   </div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
     <span class="dialogue-text">"――<span class="red-text">Haahraan!!</span>"</span>
-  </div>
-
-  <div class="narrative">
-    Melihat reaksi Reinhard, "Aldebaran" melepaskan nafasnya. Kekuatan itu menyebabkan Reinhard tidak dapat bergerak.
-    Satu riak keazaman muncul di wajahnya. Bukan penyesalan, tetapi menghadapi kesukaran.
   </div>
 
   <div class="dialogue-box box-al">
@@ -724,9 +570,6 @@
   </div>
 
   <div class="narrative">
-    Melihat wajah itu, Aldebaran menggenggam penumbuknya.
-    Fenomena itu disebabkan oleh api yang memakan semua oksigen di sekelilingnya, mencipta kawasan tanpa oksigen.
-    Disebabkan Perlindungan Sucinya, sihir tidak berkesan, tetapi dia sepatutnya tidak boleh bertahan dalam persekitaran tanpa oksigen.
     Dan di situ, dia memaku Saint Pedang itu di tempatnya.
   </div>
 
@@ -736,7 +579,6 @@
   </div>
 
   <div class="narrative">
-    Malah Reinhard, yang memaksa sihir dan sains tunduk kepada kehendaknya, akhirnya didesak ke sudut oleh fenomena yang Od Lagna sendiri tidak sedari.
     Dengan membunuh Tekniknya dan Tubuhnya, dia berjaya mengunci dua elemen yang diperlukan untuk menakluk Reinhard.
     Dan kemudian――
   </div>
@@ -752,9 +594,6 @@
   </div>
 
   <div class="narrative">
-    Peluang untuk mara tiba.
-    Sementara "Aldebaran" menggunakan nafasnya untuk menahan Reinhard, Aldebaran mencurahkan Mana Naga yang sangat besar.
-    Dua formasi menegak berbentuk silinder panjang terbentang di udara, diselaputi kilat ungu, berderak dan memancarkan cahaya biru pucat.
     Dua rel sihir merentasi langit.
     Dalam erti kata lain, itu adalah――
   </div>
@@ -764,21 +603,13 @@
     <span class="dialogue-text">"――<span class="red-text">Magia Railgun.</span>"</span>
   </div>
 
-  <div class="narrative">
-    Railgun berkuasa sihir, dimuatkan dengan peluru yang bukan api, ais, mahupun plumbum.
-    Dengan dao yang dicipta Aldebaran menggunakan Sihir Tanah, dia telah mengikis sisik Naga―― ini menjadi peluru yang ditembak pada kelajuan kilat dan menghentam Reinhard yang kekurangan oksigen.
-    Tidak kira betapa pantasnya Reinhard, dia tidak boleh lari daripada kilat.
-  </div>
-
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
     <span class="dialogue-text">"――Hk!"</span>
   </div>
 
   <div class="narrative">
-    Perlindungan Suci Pandangan Pertama dan Pengelakan Projektil diaktifkan serentak.
-    Disebabkan itu, Reinhard condong sedikit ke hadapan, dan railgun itu nyaris mengenainya dan mengorek separuh bulatan di Lautan Pasir.
-    Walau bagaimanapun――
+    Reinhard condong sedikit ke hadapan, dan railgun itu nyaris mengenainya.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -788,9 +619,6 @@
 
   <div class="narrative">
     Terdapat semburan darah yang memercik ke atas Lautan Pasir.
-    Railgun itu bukan hentaman terus. Ia hanya menyerempetnya. Tetapi selagi serangan itu mematikan, malah Reinhard tidak akan terselamat tanpa calar.
-    Berdarah dengan banyak dari bahu kanannya, Reinhard, buat pertama kalinya dalam lebih seratus tiga puluh ribu pertempuran, menunjukkan kerosakan yang nyata.
-    Dan selepas itu――
   </div>
 
   <div class="dialogue-box box-dragon">
@@ -800,18 +628,11 @@
 
   <div class="narrative">
     Magia Railgun kedua ditembak, dan sisik itu menembusi betul-betul di tengah Reinhard.
-    Gelombang letupan yang tidak dapat dielak memusnahkan Lautan Pasir, dan Reinhard hilang. ――Tidak, dia tidak hilang. Dia telah disapu bersama sisik itu, tepat di laluan tembakan railgun.
-    Malah Reinhard tidak dapat menahan kekuatan dan kelajuan hentaman langsung. Jika dia menerima hentaman itu secara terus, itu ceritanya.
   </div>
 
   <div class="dialogue-box box-al">
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"――<span class="red-text">Perlindungan Suci Kebangkitan Semula.</span>"</span>
-  </div>
-
-  <div class="narrative">
-    Dengan lengan kanan yang memancutkan darah terkulai di sisi, Reinhard menggenggam Pedang Naga dengan tangan kirinya, dan dia sekali lagi menahan letupan railgun dengan sarungnya.
-    Tidak dapat menahan impak, dia telah terpelanting... tidak, dia telah terbang ke belakang mengikut arah railgun untuk menyebarkan hentaman maut itu.
   </div>
 
   <div class="dialogue-box box-dragon">
@@ -820,9 +641,7 @@
   </div>
 
   <div class="narrative">
-    Saat "Aldebaran" melihat perkara yang sama seperti Aldebaran, ia melakukan mantera itu.
-    Satu singulariti jisim yang memusnahkan, serupa dengan lubang hitam, muncul di belakang Reinhard. Ia memusatkan jumlah Mana yang cukup besar untuk menjatuhkan bintang ke dalam satu titik.
-    Sebaik sahaja bersentuhan dengan Reinhard semasa dia diterbangkan, nyawa Saint Pedang itu hancur berkecai――
+    Satu singulariti jisim yang memusnahkan muncul di belakang Reinhard.
   </div>
 
   <div class="dialogue-box box-al">
@@ -831,9 +650,7 @@
   </div>
 
   <div class="narrative">
-    Pada saat berikutnya, hujung Pedang Naga menusuk ke dalam singulariti itu, dan sfera hitam itu dimusnahkan secara paksa.
     Pedang Naga dikatakan tidak boleh dimusnahkan. Kekuatannya telah terbukti tanpa keraguan, tetapi lengan kiri Reinhard, yang memegang Pedang Naga ketika ia mengganggu singulariti itu, telah musnah.
-    Railgun telah merosakkan lengan kanan Reinhard, dan singulariti telah merosakkan lengan kirinya.
     Keadaannya ialah――
   </div>
 
@@ -843,7 +660,7 @@
   </div>
 
   <div class="narrative">
-    Detik berikutnya, Reinhard, dengan hujung kakinya tertanam di tanah berpasir, dengan lengannya yang berdarah masih terkulai lemah, menyepak Pedang Naga yang jatuh dengan kakinya―― dan menghantarnya terbang.
+    Detik berikutnya, Reinhard, menyepak Pedang Naga yang jatuh dengan kakinya―― dan menghantarnya terbang.
   </div>
 
   <div class="dialogue-box box-dragon">
@@ -853,8 +670,6 @@
 
   <div class="narrative">
     Cahaya menembusi tengah tekak "Aldebaran", dan Naga itu jatuh dengan ganas.
-    Debu dan gelora hasil daripada kejatuhan Naga menyebabkan Aldebaran jatuh tergolek tanpa daya. Dia menyedut awan debu yang naik dan tersedak. Dia terbatuk.
-    Dan kemudian――
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -864,10 +679,6 @@
 
   <div class="narrative">
     Memandang ke bawah pada Aldebaran yang rebah di tanah, Reinhard yang berlumuran darah mengumumkannya.
-    Selepas memastikan "Aldebaran" tidak sedarkan diri, dia memandang Aldebaran.
-    Selepas memaksanya ke sudut sedemikian, setelah melakukan begitu banyak, ia tetap satu kekalahan.
-    Merompak kedua-dua lengannya, dan menakluk Tubuhnya, tidak mencukupi.
-    Melancarkan serangan yang Perlindungan Sucinya tidak dapat pertahankan, dan menakluk Tekniknya, tidak mencukupi.
     Saint Pedang, Reinhard van Astrea, terlalu kuat.
     <br><br>
     Oleh itu, Aldebaran menarik nafas panjang, dan――
