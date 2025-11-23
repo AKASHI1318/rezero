@@ -9,8 +9,8 @@
 <style>
   /* --- GAYA ASAS (BASIC STYLES) --- */
   body {
-    background-color: #000000; /* Hitam mutlak */
-    color: #ffffff; /* Putih mutlak */
+    background-color: #050505; /* Hitam Pekat */
+    color: #eeeeee; /* Putih Kelabu */
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 20px;
@@ -21,9 +21,10 @@
   .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #111111; /* Kelabu sangat gelap */
-    padding: 20px;
+    background-color: #111111; /* Kelabu Gelap */
+    padding: 40px;
     border: 1px solid #333;
+    min-height: 100vh;
   }
 
   h2 {
@@ -31,20 +32,20 @@
     font-family: 'Cinzel', serif;
     color: #ff4d4d; /* Merah */
     border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
   }
 
   /* --- KOTAK DIALOG (DIALOGUE BOX) --- */
-  /* Ini memastikan kotak sentiasa kelihatan */
   .dialogue-box {
-    background-color: #222222; /* Kelabu Gelap */
-    border: 1px solid #444444; /* Garisan Tepi Kelabu Cerah */
-    border-left-width: 5px; /* Garisan Kiri Tebal */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    display: block; /* Paksa tunjuk */
-    opacity: 1; /* Paksa jelas (tidak telus) */
+    background-color: #1a1a1a; 
+    border: 1px solid #444; 
+    border-left-width: 5px; 
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 0 10px 10px 0;
+    display: block;
   }
 
   /* Nama Watak */
@@ -54,76 +55,79 @@
     text-transform: uppercase;
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    opacity: 0.8;
   }
 
   /* Teks Dialog */
   .dialogue-text {
     font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #fff;
     display: block;
+    line-height: 1.4;
   }
 
-  /* --- WARNA WATAK (CHARACTER COLORS) --- */
-  /* Reinhard (Biru) */
+  /* --- WARNA WATAK --- */
   .reinhard { color: #87CEEB; }
   .box-reinhard { border-left-color: #87CEEB; }
 
-  /* Aldebaran (Merah) */
   .aldebaran { color: #ff4d4d; }
   .box-al { border-left-color: #ff4d4d; }
 
-  /* Naga (Jingga) */
   .dragon-al { color: #ff8c00; }
   .box-dragon { border-left-color: #ff8c00; }
 
   /* --- LAIN-LAIN --- */
   .narrative {
-    color: #cccccc;
-    margin: 20px 0;
+    color: #bbb;
+    margin: 25px 0;
     text-align: justify;
+    font-size: 1rem;
   }
 
   .red-text {
     color: #ff4d4d;
     font-weight: bold;
-    text-decoration: underline;
   }
 
   .highlight {
     color: #ffcc00;
     font-weight: bold;
+    border-bottom: 1px dashed #ffcc00;
   }
 
   .action {
     text-align: center;
     font-style: italic;
     color: #888;
-    margin: 30px 0;
-    border-top: 1px dashed #333;
-    border-bottom: 1px dashed #333;
-    padding: 10px;
+    margin: 40px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 15px;
   }
 
   .loop-marker {
     text-align: center;
     font-size: 1.2rem;
     color: #666;
-    margin: 40px 0;
+    margin: 50px 0;
     font-family: 'Cinzel', serif;
     border: 1px solid #333;
-    padding: 10px;
+    padding: 15px;
+    letter-spacing: 2px;
   }
 
   .wall-of-text {
-    font-size: 0.7rem;
-    color: #555;
+    font-size: 0.8rem;
+    color: #666;
     background: #000;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #333;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: auto;
+    text-align: justify;
+    margin: 20px 0;
   }
 </style>
 </head>
@@ -134,7 +138,9 @@
   <h2>Aldebaran lwn Reinhard</h2>
 
   <div class="narrative">
-    Rambut merah menyala bagaikan api yang marak, mata biru memenjara kejernihan sempurna langit biru.
+    Rambut merah menyala bagaikan api yang marak, mata biru memenjara kejernihan sempurna langit biru; dari hujung rambut ke hujung kaki, inilah makhluk yang dicipta dengan kepahlawanan yang tidak tercemar, tanpa sebarang kekotoran.
+    <br><br>
+    Berdiri teguh di tengah-tengah lautan pasir yang luas, di bawah kedinginan malam, Reinhard melontarkan pandangannya, menyebabkan seluruh bulu roma di badan Aldebaran meremang.
     <br><br>
     <span class="red-text">――Saint Pedang, Reinhard van Astrea.</span>
   </div>
@@ -192,14 +198,14 @@
     <span class="dialogue-text">"――BOHRRRGGGHHH!!!"</span>
   </div>
 
-  <div class="action">Gelombang tenaga putih yang membuak menelan Reinhard.</div>
+  <div class="action">Gelombang tenaga putih yang membuak menelan Reinhard, mengubah bentuk Lautan Pasir yang sunyi itu.</div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
     <span class="dialogue-text">"――Hk, undur, diriku!!"</span>
   </div>
 
-  <div class="action">Reinhard melompat tanpa calar.</div>
+  <div class="action">Reinhard melompat tanpa calar, bertembung secara berhadapan dengan Naga itu.</div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
@@ -237,7 +243,7 @@
   </div>
 
   <div class="narrative">
-    <span class="red-text">――Al Shario.</span> Satu mantera terlarang yang mampu membelah dunia.
+    <span class="red-text">――Al Shario.</span> Satu mantera terlarang yang mampu membelah dunia. Ia berdiri sebagai kemuncak kehancuran.
   </div>
 
   <div class="dialogue-box box-dragon">
@@ -245,7 +251,7 @@
     <span class="dialogue-text">"――Al Shario."</span>
   </div>
 
-  <div class="action">Naga itu memukul Reinhard dengan sayapnya ke arah bintang yang sedang jatuh.</div>
+  <div class="action">Naga itu memukul Reinhard dengan sayapnya, melancarkannya tanpa pertahanan ke arah bintang yang sedang jatuh.</div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
@@ -272,6 +278,8 @@
   </div>
 
   <div class="narrative">
+    Selepas menerima jawapannya, dia tergamam apabila pancaran kemusnahan itu dilayan seperti bola api. Namun, rasa tergamam itu segera ditutup oleh rasa gerun yang membuak.
+    <br><br>
     Jika seseorang percaya bahawa Perlindungan Suci Imbangan Bola adalah seperti namanya, maka seorang pengimbang bola di sarkas bukan sekadar berdiri di atas bola, tetapi mengawalnya sesuka hati――
   </div>
 
@@ -283,7 +291,7 @@
   <div class="action">Kaki Reinhard kelihatan mengetuk ringan permukaan bintang itu.</div>
 
   <div class="narrative">
-    Pada saat berikutnya, trajektori bintang yang dijatuhkan oleh Al Shario berubah, dan melencong ke arah penyerunya, "Aldebaran".
+    Pada saat berikutnya, trajektori bintang yang dijatuhkan oleh Al Shario berubah, dan melencong ke arah penyerunya, "Aldebaran", menyebabkan cahaya bintang yang ganas itu menghampirinya dengan pantas.
     Melihatnya, Naga itu menyumpah, menyambut serangan itu dengan nafasnya yang maha kuat.
   </div>
 
@@ -293,7 +301,8 @@
   </div>
 
   <div class="narrative">
-    Seketika kemudian, cahaya merah dan putih yang menyilaukan menelan langit.
+    Seketika kemudian, cahaya merah dan putih yang menyilaukan menelan langit, mencipta ilusi bahawa malam telah berakhir.
+    Bintang yang hancur itu meletup menjadi serpihan berkilauan yang tidak terhitung banyaknya, mengebom lautan pasir.
   </div>
 
   <div class="dialogue-box box-al">
@@ -303,6 +312,7 @@
 
   <div class="narrative">
     Sudah tentu, Aldebaran yang berada di tanah juga telah diterbangkan.
+    Tidak lama kemudian, dia mendengar bunyi gemuruh... di mana dia melihat "Aldebaran", dengan satu sayap patah dan satu lagi terputus, telah jatuh ke tanah tanpa daya.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -311,8 +321,9 @@
   </div>
 
   <div class="narrative">
+    Ke arah sisi Aldebaran yang rebah, Reinhard berjalan.
     Memang, Reinhard telah menilai dengan betul. ――Untuk kali ke-lapan ribu empat ratus enam puluh enam, ini adalah kemenangannya.
-    <br>
+    <br><br>
     Tetapi――
   </div>
 
@@ -322,7 +333,8 @@
   </div>
 
   <div class="narrative">
-    Pada ketika itu, di belakang Reinhard, "Aldebaran" mengangkat kepalanya dan melepaskan nafas Naga.
+    Pada ketika itu, di belakang Reinhard, "Aldebaran" mengangkat kepalanya dari tempat ia jatuh, dan melepaskan nafas Naga yang menakutkan ke arah mereka.
+    Reinhard mustahil dapat mengabaikannya. ――Itu kerana Aldebaran juga berada dalam laluan tembakan itu.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -333,12 +345,19 @@
   <div class="action">Reinhard menebas nafas itu secara berhadapan.</div>
 
   <div class="narrative">
+    Suara Reinhard melimpah dengan kemarahan yang adil, hatinya dipenuhi amarah terhadap percubaan bunuh-membunuh ini.
+    <br><br>
+    Sungguh baik hati dirinya. Lain kali, dia akan memasukkan itu ke dalam strateginya.
     Dengan keputusan ini, Aldebaran membuka bungkusan ubat di dalam mulutnya, dan menelan racun yang terkandung di dalamnya.
   </div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
     <span class="dialogue-text">"Apa…!"</span>
+  </div>
+
+  <div class="narrative">
+    Menyedari ada sesuatu yang tidak kena, Reinhard berpusing, wajahnya menjadi kaku. Dalam penglihatannya, Aldebaran sedang menggelupur dan kejang di tanah, lemas dalam buih berdarah ketika kesedarannya pergi ke alam sana――
   </div>
 
   <div class="loop-marker">× × ×</div>
@@ -349,7 +368,8 @@
   </div>
 
   <div class="narrative">
-    Suara yang bermaruah membelah langit yang dingin dan beku.
+    Suara yang bermaruah membelah langit yang dingin dan beku, dan sejalur cahaya menembusi Naga yang sedang terbang itu secara serong.
+    Aldebaran dan dirinya yang satu lagi jatuh menjunam ke tanah.
   </div>
 
   <div class="dialogue-box box-reinhard">
@@ -379,12 +399,18 @@
   </div>
 
   <div class="narrative">
-    Aldebaran tiada pilihan selain menakluk Saint Pedang, Reinhard van Astrea, menggunakan matriks yang bermula dengan pengisytiharan "<span class="red-text">――Setakat itu sahajalah kamu</span>".
+    Sebaik sahaja matriks dikemas kini, mustahil untuk kembali ke tugas sebelumnya.
+    Ini bermakna, Aldebaran tiada pilihan selain menakluk Saint Pedang, Reinhard van Astrea, menggunakan matriks yang bermula dengan pengisytiharan "<span class="red-text">――Setakat itu sahajalah kamu</span>".
+    Oleh sebab itu, dia telah melalui lebih lapan ribu pengulangan ayat.
   </div>
 
   <div class="dialogue-box box-reinhard">
     <span class="char-name reinhard">Reinhard van Astrea</span>
     <span class="dialogue-text">"<span class="red-text">――Setakat itu sahajalah kamu.</span>"</span>
+  </div>
+
+  <div class="narrative">
+    Dengan itu, ketika Naga ditembusi cahaya, pertempuran seterusnya Aldebaran bermula.
   </div>
 
   <div class="loop-marker">――Lapan ribu lapan ratus lapan puluh lapan.</div>
@@ -399,8 +425,6 @@
     <span class="dialogue-text">"――<span class="red-text">Seterusnya.</span>"</span>
   </div>
 
-  <div class="loop-marker">× × ×</div>
-
   <div class="loop-marker">――Sepuluh ribu dua ratus dua belas.</div>
 
   <div class="dialogue-box box-reinhard">
@@ -412,8 +436,6 @@
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"――<span class="red-text">Seterusnya.</span>"</span>
   </div>
-
-  <div class="loop-marker">× × ×</div>
 
   <div class="loop-marker">――Enam belas ribu lapan.</div>
 
@@ -427,8 +449,6 @@
     <span class="dialogue-text">"――<span class="red-text">Seterusnya.</span>"</span>
   </div>
 
-  <div class="loop-marker">× × ×</div>
-
   <div class="loop-marker">――Enam puluh empat ribu tujuh ratus sembilan puluh sembilan.</div>
 
   <div class="dialogue-box box-reinhard">
@@ -437,7 +457,7 @@
   </div>
 
   <div class="narrative">
-    Sebelum menghentam tanah, diserang kesakitan yang amat sangat, fikirannya menjadi putih――
+    Sebelum menghentam tanah, diserang kesakitan yang amat sangat seolah-olah seluruh darahnya mendidih, fikirannya menjadi putih――
   </div>
 
   <div class="dialogue-box box-al">
@@ -459,7 +479,7 @@
   </div>
 
   <div class="wall-of-text">
-    berulang, dan berulang, dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang lagi...
+    berulang, dan berulang, dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang dan berulang lagi...
   </div>
 
   <div class="narrative">
@@ -472,12 +492,17 @@
   </div>
 
   <div class="narrative">
+    Berdiri menentang Reinhard di hadapan, Aldebaran menyeluk sakunya, mengeluarkan Buku Kematian.
     Ia adalah "Aldebaran" yang satu lagi, bersedia di belakangnya.
   </div>
 
   <div class="dialogue-box box-dragon">
     <span class="char-name dragon-al">"Aldebaran" (Naga)</span>
     <span class="dialogue-text">"――Penyegerakan, selesai."</span>
+  </div>
+
+  <div class="narrative">
+    Buku Kematian yang dibawanya telah merekodkan semua pertempuran sengit sebelah pihak menentang Reinhard yang dialami Aldebaran.
   </div>
 
   <div class="dialogue-box box-al">
@@ -501,10 +526,6 @@
   <div class="dialogue-box box-al">
     <span class="char-name aldebaran">Aldebaran</span>
     <span class="dialogue-text">"Aku adalah… bintang pengikut."</span>
-  </div>
-
-  <div class="narrative">
-    Satu pengisytiharan yang seolah-olah diucapkan secara spontan, Reinhard menerimanya, dan mara ke hadapan.
   </div>
 
   <div class="loop-marker">△▼△▼△▼△</div>
